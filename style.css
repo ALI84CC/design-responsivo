@@ -1,13 +1,32 @@
 html,body{
-
     margin: 0;
     padding: 0;
 }
-
 .container{
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+header{
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: 800;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
 }
 
 .search-field{
@@ -15,6 +34,7 @@ html,body{
     display: flex;
     gap: 10px;
 }
+
 
 .search-area{
 
@@ -25,7 +45,7 @@ html,body{
     border-radius: 7px;
     gap: 5px;
 }
-
+ 
 .search-field button{
     padding: 0 20px;
     background-color: transparent;
@@ -139,4 +159,28 @@ footer ul{
     display: flex;
     justify-content: center;
     
+}
+
+footer ul li{
+    width: 15px;
+    height: 15px;
+    border: solid 1px #000;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li:hover{
+    transform: scale(1.05);
+    transition: .6s;
+}
+
+/* Breakpoints */
+
+@media(max-width: 600px){
+    .nav-menu{
+        display: none;
+    }
 }
