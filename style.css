@@ -15,6 +15,8 @@ html,body{
     display: none;
 }
 
+/* header */
+
 header{
     background-color: #000;
     color: #fff;
@@ -31,6 +33,17 @@ ul{
     margin: 10px 0;
 }
 
+header ul li{
+    cursor: pointer;
+    border-bottom: #000;
+}
+
+.nav-menu ul li:hover{
+
+    border-bottom:solid 1px #fff ;
+    transition: .6s;
+}
+
 .nav-menu{
     display: flex;
     justify-content: space-between;
@@ -43,8 +56,13 @@ ul{
 }
 
 
-.search-area{
+.search-field{
 
+    display: flex;
+    gap: 10px;
+}
+
+.search-area{
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -69,7 +87,7 @@ ul{
     width: 100%;
 }
 
-.search-area input:focus{
+.search-area input:focus {
     outline: none;
 }
 
@@ -168,7 +186,7 @@ footer ul{
     
 }
 
-footer ul li{
+footer ul a{
     width: 15px;
     height: 15px;
     border: solid 1px #000;
@@ -185,7 +203,12 @@ footer ul li:hover{
 }
 
 /* Breakpoints */
+@media(max-width: 992px){
 
+    .card-field{
+        grid-template-columns: repeat(2, 1fr);  
+    }
+}
 @media(max-width: 600px){
     .nav-menu{
         display: none;
@@ -247,5 +270,9 @@ footer ul li:hover{
         background-color: #5252e2;
         transition: .6s;
 
+    }
+     .card-field{
+        grid-template-columns: 1fr;
+        
     }
 }
